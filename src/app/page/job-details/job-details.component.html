@@ -1,24 +1,26 @@
-<app-header pageTitle="AD Group Job Listing"></app-header>
+<app-header [pageTitle]="'AD Group Job Listing'"></app-header>
 
 <section ngClass="main container">
   <a href="javascript:;" routerLink="/" ngClass="mini-nav"><< back to list</a>
 
-  <ng-container *ngIf="job">
+  <ng-container *ngIf="job && !isBusy">
     <h2>{{ job.title }}</h2>
     <h5 ngClass="job-subtitle grey font-normal" *ngIf="job && job.location && job.date">
-      <span *ngIf="job.location">Location: <strong>{{ job.location }}</strong></span><br><br>
-      <span *ngIf="job.date">Date: <strong>{{ job.date | date:'mediumDate' }}</strong></span>
+      <span *ngIf="job.location">Location: <strong class="bigger">{{ job.location }}</strong></span><br>
+      <span *ngIf="job.date">Date: <strong class="bigger">{{ job.date | date:'mediumDate' }}</strong></span>
     </h5>
-    <h5 class="grey font-normal">
+    <h5 class="grey font-normal mrgb-5">
       Job Description:
     </h5>
-    <p innerHtml="job.description"></p>
+    <p ngClass="bigger grey bold" [innerHtml]="job.description"></p>
     <hr>
     <h5 class="grey font-normal">
       Applicants
     </h5>
-    <ul class="applicant-list">
-      <li>Jonh Doe</li>
+    <ul class="applicant-list" *ngIf="job.applicants">
+      <li *ngFor="let applicant of job.applicants">
+        <strong ngClass="grey bigger">{{ applicant | titlecase }}</strong>
+      </li>
     </ul>
   </ng-container>
 </section>
