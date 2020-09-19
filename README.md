@@ -1,27 +1,17 @@
 # AdgPracticalTestFe
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+Intended to be the frontend for [Practical Test BE](https://github.com/lalajr/adg-pratical-test-be).
+> This project is under development environment only
 
-## Development server
+## Requirements
+- Setup of [Practical Test BE](https://github.com/lalajr/adg-pratical-test-be) the frontend will make API request to that backend repo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
+Follow the steps below to make your clone of this frontend up and running.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. After cloning, run command `npm install` to initiate all dependencies for this project.
+2. Open the file `environment.ts` located in `src\environment\` and change the key `apiUrl` to that url path where your backend is located inserting `api` at the last position of it eg: `http://localhost/MYBACKENDPATHHERE/public/api/` **Note: leave the key token at it is**
+3. Now run the command `npm start` this will start dev server of the project (leave it running). Navigate to `http://localhost:4200/` and your app is loaded there.
+> Note: At this point make sure your local server for the Backend is up and running, so that this app can make API request.
+> Note: If you are seeing a javascript alert with 'undefined error' means that your Backend service is not running.
