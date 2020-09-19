@@ -8,9 +8,12 @@ body {
   font-family: Arial, sans-serif;
   font-size: 14px;
   margin: 0;
+  min-width: 767px;
+  padding: 0 15px;
 }
 
 .container {
+  width: 100%;
   max-width: 992px;
   margin: auto;
 }
@@ -28,6 +31,14 @@ body {
   text-decoration: underline;
 }
 
+p {
+  margin: .5em 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 /* Typography and Colors */
 .font-normal {
   font-weight: normal;
@@ -37,4 +48,12 @@ body {
   color: rgb(61, 61, 61);
 }
 
+.bigger {
+  font-size: 1.02rem;
+}
+
+/* MISC */
+.mrgb-5 {
+  margin-bottom: 5px;
+}
 
