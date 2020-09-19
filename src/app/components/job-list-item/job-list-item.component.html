@@ -1,8 +1,24 @@
 <div ngClass="job-item" *ngIf="job">
+
   <h2 ngClass="job-title">
-    <a href="javascript:;" (click)="goDetails(job.id)">Job Title Here</a>
+    <a href="javascript:;" (click)="goDetails(job.id)">{{ job.title }}</a>
   </h2>
-  <h5 ngClass="job-subtitle grey font-normal" *ngIf="job.location && job.date"><span *ngIf="job.location">Location: <strong>Melbourne</strong></span> <span *ngIf="job.date">| Date: <strong>2010-01-02</strong></span></h5>
-  <p ngClass="job-description grey" *ngIf="job.description">{{ desc.length > descLimit ? (desc | slice:0:descLimit) + '...' : '' }}</p>
-  <a href="javascript:;" ngClass="mini-nav" (click)="goDetails(job.id)">View Job >></a>
+
+  <h5 ngClass="job-subtitle grey font-normal" *ngIf="job.location || job.date">
+    <span *ngIf="job.location">
+      Location: <strong>{{ job.location }}</strong>
+    </span> 
+    <span *ngIf="job.date">
+       | Date: <strong>{{ job.date | date:'mediumDate' }}</strong>
+      </span>
+  </h5>
+
+  <p ngClass="job-description grey" 
+    *ngIf="job.description" 
+    [innerHtml]="job.description.length > descLimit ? (job.description | slice:0:descLimit) + '...' : job.description"></p>
+
+  <a href="javascript:;" 
+    ngClass="mini-nav" 
+    [routerLink]="'/job/' + job.id">View Job >></a>
+
 </div>

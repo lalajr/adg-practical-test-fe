@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   // Replace this with the path of your Backend API's
-  apiUrl: 'http://localhost/virtualstaff/adg-practical-test-be/public/api'
+  apiUrl: 'http://localhost/virtualstaff/adg-practical-test-be/public/api/',
+  token: 'j2ek6lNsCq5wUOx'
 };
 
 /*

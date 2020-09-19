@@ -1,9 +1,6 @@
 .job-item {
   padding: 15px 0;
-}
-
-.job-item + .job-item {
-  border-top: 2px solid rgba(36, 36, 36, 0.333);
+  border-bottom: 2px solid rgba(36, 36, 36, 0.333);
 }
 
 .job-title {
