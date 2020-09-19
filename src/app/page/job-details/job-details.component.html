@@ -3,7 +3,7 @@
 <section ngClass="main container">
   <a href="javascript:;" routerLink="/" ngClass="mini-nav"><< back to list</a>
 
-  <ng-container *ngIf="job && !isBusy">
+  <ng-container *ngIf="job && !isBusy; else defaultDiv">
     <h2>{{ job.title }}</h2>
     <h5 ngClass="job-subtitle grey font-normal" *ngIf="job && job.location && job.date">
       <span *ngIf="job.location">Location: <strong class="bigger">{{ job.location }}</strong></span><br>
@@ -23,4 +23,7 @@
       </li>
     </ul>
   </ng-container>
+  <ng-template #defaultDiv>
+    <h5>Job not found, <a href="javascript:;" routerLink="/">Go back!</a></h5>
+  </ng-template>
 </section>
