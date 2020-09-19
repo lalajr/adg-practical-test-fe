@@ -1,0 +1,8 @@
+<div class="job-item">
+  <h2 class="job-title">
+    <a href="javascript:;" (click)="goDetails(job.id)">Job Title Here</a>
+  </h2>
+  <h5 class="job-subtitle" *ngIf="job.location && job.date"><span *ngIf="job.location">Location: <strong>Melbourne</strong></span> <span *ngIf="job.date">| Date: <strong>2010-01-02</strong></span></h5>
+  <p class="job-description" *ngIf="job.description">{{ desc.length > descLimit ? (desc | slice:0:descLimit) + '...' : '' }}</p>
+  <a href="javascript:;" (click)="goDetails(job.id)">View Job >></a>
+</div>
