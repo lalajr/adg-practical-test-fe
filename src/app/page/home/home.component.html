@@ -1,4 +1,17 @@
-<app-header pageTitle="AD Group Job Listing"></app-header>
+<app-header [pageTitle]="'AD Group Job Listing'"></app-header>
 <section ngClass="main container">
-  <app-job-list-item></app-job-list-item>
+  <p *ngIf="isBusy">Retrieving job records</p>
+  <ng-container *ngIf="!isBusy">
+    <ng-container *ngIf="jobs.length > 0; else noJobs">
+      <ng-container  *ngFor="let job of jobs">
+        <app-job-list-item [job]="job"></app-job-list-item>
+      </ng-container>
+      <button (click)="loadMore()" ngClass="btn-loadmore" *ngIf="currPage != lastPage">
+        {{ rePaging ? 'Loading jobs...' : 'Load More' }}
+      </button>
+    </ng-container>
+    <ng-template #noJobs>
+      <h5>No job listing found!</h5>
+    </ng-template>
+  </ng-container>
 </section>

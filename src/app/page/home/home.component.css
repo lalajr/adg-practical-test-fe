@@ -1,4 +1,19 @@
-* {
-  box-sizing: border-box;
+.main {
+  padding-bottom: 55px;
 }
 
+.btn-loadmore {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: rgb(11, 182, 88);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-loadmore:hover {
+  background: rgb(10, 129, 64);
+}
