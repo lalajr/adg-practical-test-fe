@@ -14,3 +14,27 @@ body {
   max-width: 992px;
   margin: auto;
 }
+
+.mini-nav {
+  color: rgb(24, 159, 250);
+  text-decoration: none;
+  margin-top: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.mini-nav:hover {
+  color: rgb(60, 132, 240);
+  text-decoration: underline;
+}
+
+/* Typography and Colors */
+.font-normal {
+  font-weight: normal;
+}
+
+.grey {
+  color: rgb(61, 61, 61);
+}
+
+
