@@ -1,0 +1,43 @@
+.job-item {
+  padding: 15px 0;
+}
+
+.job-item + .job-item {
+  border-top: 2px solid rgba(36, 36, 36, 0.333);
+}
+
+.job-title {
+  margin-bottom: 0;
+}
+.job-title a {
+  color: rgb(20, 20, 20);
+  text-decoration: none;
+}
+.job-title a:hover {
+  color: rgb(60, 132, 240);
+  text-decoration: underline;
+}
+
+.job-subtitle {
+  margin-top: 5px;
+  font-weight: normal;
+  color: rgb(61, 61, 61);
+}
+
+.job-description {
+  margin: 10px 0 5px;
+  color: rgb(61, 61, 61);
+}
+
+.job-item > a {
+  color: rgb(24, 159, 250);
+  text-decoration: none;
+  margin-top: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.job-item > a:hover {
+  color: rgb(60, 132, 240);
+  text-decoration: underline;
+}
