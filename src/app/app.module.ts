@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './page/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { JobListItemComponent } from './components/job-list-item/job-list-item.component';
+import { JobDetailsComponent } from './page/job-details/job-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    JobListItemComponent
+    JobListItemComponent,
+    JobDetailsComponent
   ],
   imports: [
     BrowserModule,
